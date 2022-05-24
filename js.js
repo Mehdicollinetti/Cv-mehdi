@@ -17,5 +17,5 @@ function positionnerEcran(numEcran) {
  );
 }
 function changerCurseur(numLien)
-{
+
  lienMenu[numLien].style.cursor = 'pointer';
