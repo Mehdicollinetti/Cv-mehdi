@@ -11,23 +11,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: rgb(10, 10, 10);
+
 }
 
 #blocPrincipal {
   width: 100%;
   max-width: 2000px;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-
 }
 
 .ecran {
   height: 92vh;
   width: 100%;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
 }
@@ -46,17 +42,19 @@ section {
   width: 100%;
   background-color: #fff;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
 }
-.moncercle{
-  background:#bfd70e;
-  border-radius:100%;
-  width:25%;
-  height:500px;
-  border:5px solid #090909;}
- 
+
+.moncercle {
+  background: hwb(0 13% 1%);
+  border-radius: 100%;
+  width: 25%;
+  height: 500px;
+  border: 5px solid #090909;
+}
+
 /* ecran 2 */
 .ecran2 {
   width: 100%;
@@ -82,19 +80,74 @@ section {
   width: 100%;
 }
 
-nav{
-  width: 100%;
-  background-color: #fff;
+nav {
+  background-color: rgb(255, 0, 0);
   display: flex;
-  justify-content:space-around;
+  height: 200px;
+  width: 100%;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
+  border: 1px solid #fc0000;
+
 }
-ul{  width: 100%;
-  background-color: #fff;
+
+ul {
+  width: 100%;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
 
+}
+
+li {
+  list-style-type: none;
+  width: 150px;
+}
+
+li a {
+  /*background-color: #000000;
+  padding: 5px;
+   color: #fff;*/
+   width:150px;
+   height:50px;
+   font-size:16px;
+   margin:auto;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   position:relative;
+   cursor:pointer;
+}
+
+/** hover 20 */
+a:nth-child(1){
+  color:#fff;
+  transition:.2s all;
+}
+a:nth-child(1):before,a:nth-child(1):after{
+  content:'';
+  position:absolute;
+  height:0;
+  width:0;
+  transition:.3s all;
+  z-index:-1;
+  border:1px solid #fff;
+}
+a:nth-child(1):before{
+  left:0;
+  top:0;
+}
+a:nth-child(1):after{
+  right:0;
+  bottom:0;
+}
+a:nth-child(1):hover{
+  color:#FF3030;
+}
+a:nth-child(1):hover:before,a:nth-child(1):hover:after{
+  background:rgba(255,255,255,.6);
+  width:100%;
+  height:100%;
 }
