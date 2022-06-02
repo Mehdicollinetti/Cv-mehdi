@@ -9,9 +9,17 @@
     <title>Mon cv en ligne</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/097058085d.js" crossorigin="anonymous"></script>
-    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        
+    (function() {
+    // https://dashboard.emailjs.com/admin/account//
+    emailjs.init('bto5WJ3TwRwhXWp4O');
+    })();
+    </script>
 
-   
+
+
 </head>
 
 <body>
@@ -25,9 +33,9 @@
                 <label class="logo"></label>
                 <ul>
                     <li><a class="active hover-bg" href="#">Accueil</a></li>
-                    <li><a class="hover-bg" href="#">A propos</a></li>
                     <li><a class="hover-bg" href="#">Compétences</a></li>
                     <li><a class="hover-bg" href="#">Formation</a></li>
+                    <li><a class="hover-bg" href="#">Expériences</a></li>
                     <li><a class="hover-bg" href="#"> Contact</a></li>
                 </ul>
             </nav>
@@ -82,7 +90,7 @@
                 <p>2014 Atelier sectoriel hôtellerie et restauration, Beuvry</p><br>
                 <p>2011 Appui à l’élaboration du projet professionnel, SIADEP, Béthune</p><br>
                 <p>2009 Niveau 1er année Bac pro service accueil, Lycée André Malraux, Béthune</p>
-            
+
             </div>
             <div class="rectangle information">
                 <h1> Information Complémentaires</h1><br>
@@ -113,27 +121,64 @@
             </div>
 
         </div>
-      
+
         <!--ecran 6-->
         <div class="ecran ecran6">
-            <div class="rectangle Infos">
-                <h1>Contactez moi</h1><br>
-                <p>Mehdi Collinetti</p><br>
-                <p>07.79.82.67.16</p>
-                <div class="photo">
-                    <a class="NFT" href="https://www.facebook.com/mehdi.collinetti" target="_blank"><img
-                    src="image/Facebook.png" alt=""></a>
-                    <A HREF="mailto:san@antonio.net">collinettimehdi@hotmail.com</A>
+           
+                <div id="result-form">
+                </div>
+                <div class="contain-tout">
+                    <div class="form-container">
+                        <form method="post" id="contact-form">
+                            <div>
+                                <label for="nom">Nom : *</label>
+                                <input type="text" name="nom" id="nom" required minlength="3" maxlength="20">
+                                <span class="error"></span>
+                            </div>
+                            <div>
+                                <label for="email">Adresse email : *</label>
+                                <input type="email" name="email" id="email" minlength="6" maxlength="50">
+                                <span class="error"></span>
+                            </div>
+                            <div>
+                                <label for="telephone">Téléphone :</label>
+                                <input type="text" name="telephone" id="telephone">
+                                <span class="error"></span>
+                            </div>
+                            <div>
+                                <label for="message">Message : *</label>
+                                <textarea name="message" id="message" name="message" required minlength="10"
+                                    maxlength="250"></textarea>
+                                <span class="error"></span>
+                            </div>
+                            <div>
+                                <input class="btn" id="submit" type="submit" value="Envoyer">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form-image">
+                        <h1>Contactez moi</h1><br>
+                        <p>Mehdi Collinetti</p><br>
+                        <p>07.79.82.67.16</p>
+
+                    </div>
+                    <div class=" image-facebook">
+                        <a class="NFT" href="https://www.facebook.com/mehdi.collinetti" target="_blank"><img
+                                src="image/Facebook.png" alt=""></a>
+                        <A HREF="mailto:san@antonio.net">collinettimehdi@hotmail.com</A>
+                    </div>
                 </div>
 
-            </div>
+
+
+           
             <div class="rectangle Cv">
                 <h1>Cv</h1>
                 <p></p>
             </div>
         </div>
 
-
+        <script src="emailj.js"></script>
 </body>
 
 </html>
